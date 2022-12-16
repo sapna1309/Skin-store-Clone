@@ -48,7 +48,7 @@ export default function Navbar() {
     <>
       {/* // Navbar Starts// */}
 
-      <Box bg={"white"} px={4} borderBottom={"2px solid black"}>
+      <Box bg={"white"} px={4} borderBottom={"2px solid black"} pos={"fixed"} top={0} zIndex={99999}width={"100%"} >
         <Flex
           height={"110px"}
           alignItems={"center"}
@@ -162,11 +162,11 @@ export default function Navbar() {
 
       {/* DropDown Menu Starts */}
 
-      <Box>
+      <Box pos={"fixed"} top={112} width={"100%"} zIndex={999} >
         <Flex
           bg={useColorModeValue("white", "gray.800")}
           color={useColorModeValue("gray.600", "white")}
-          minH={"60px"}
+          minH={"40px"}
           py={{ base: 2 }}
           px={{ base: 4 }}
           borderBottom={1}
@@ -203,25 +203,62 @@ export default function Navbar() {
       </Box>
 
       {/* DropDown Menu Ends */}
-     <Stack backgroundColor={"#F2F2F2"}>
-      <HStack border={"0px solid gray"} backgroundColor={"#F2F2F2"} h="60px" w="73%" m={"auto"} justifyContent={"space-between"} >
-        <HStack>
-          <Image src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgoJPHBhdGggY2xhc3M9InJlc3BvbnNpdmVVc3BfaWNvbl9zdmctZmlsbCIgZD0iTTE3Ljg3NCAyNmE0LjAwMiA0LjAwMiAwIDAgMS03Ljc0OCAwSDkuMDQ3VjEyLjAyMkgyNHYxLjk5OUwyOCAxNGwzIDUgLjAyMyA3LjAyOC0xLjE1My0uMDFBNC4wMDIgNC4wMDIgMCAwIDEgMjIuMTI2IDI2aC00LjI1MnpNMjMgMTZ2NGg2di0xbC0yLTNoLTR6bS05IDExYTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMTIgMGEyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6Ii8+Cjwvc3ZnPg==" />
-          <Text>FREE US Shipping Over $49</Text>
+      <Stack backgroundColor={"#F2F2F2"} mb="20px" mt="152px" width="100%" >
+        <HStack
+          border={"0px solid gray"}
+          backgroundColor={"#F2F2F2"}
+          h="60px"
+          w="73%"
+          m={"auto"}
+          justifyContent={"space-between"}
+        >
+          <HStack>
+            <Image src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgoJPHBhdGggY2xhc3M9InJlc3BvbnNpdmVVc3BfaWNvbl9zdmctZmlsbCIgZD0iTTE3Ljg3NCAyNmE0LjAwMiA0LjAwMiAwIDAgMS03Ljc0OCAwSDkuMDQ3VjEyLjAyMkgyNHYxLjk5OUwyOCAxNGwzIDUgLjAyMyA3LjAyOC0xLjE1My0uMDFBNC4wMDIgNC4wMDIgMCAwIDEgMjIuMTI2IDI2aC00LjI1MnpNMjMgMTZ2NGg2di0xbC0yLTNoLTR6bS05IDExYTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMTIgMGEyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6Ii8+Cjwvc3ZnPg==" />
+            <Text>FREE US Shipping Over $49</Text>
+          </HStack>
+          <HStack>
+            <Image src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzkiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8cGF0aCBjbGFzcz0icmVzcG9uc2l2ZVVzcF9pY29uX3N2Zy1maWxsIiBkPSJNMjEuNDUgMjhjMy4yMyAwIDUuODUtMi42ODYgNS44NS02cy0yLjYyLTYtNS44NS02Yy0zLjIzIDAtNS44NSAyLjY4Ni01Ljg1IDZzMi42MiA2IDUuODUgNnptMCAyYy00LjMwOCAwLTcuOC0zLjU4Mi03LjgtOHMzLjQ5Mi04IDcuOC04IDcuOCAzLjU4MiA3LjggOC0zLjQ5MiA4LTcuOCA4eiIvPgoJPHBhdGggY2xhc3M9InJlc3BvbnNpdmVVc3BfaWNvbl9zdmctZmlsbCIgZD0iTTE1LjczMiAyNi43ODJjLTMuNDMtLjg0LTUuOTgyLTQuMDA2LTUuOTgyLTcuNzgyIDAtNC40MTggMy40OTItOCA3LjgtOCAyLjgxNCAwIDUuMjggMS41MjkgNi42NTIgMy44MmwtMS42NjIgMS4wNDdDMjEuNDgyIDE0LjA5OCAxOS42MSAxMyAxNy41NSAxM2MtMy4yMyAwLTUuODUgMi42ODYtNS44NSA2IDAgMi43OTIgMS44NzUgNS4xOTcgNC40ODUgNS44MzZsLS40NTMgMS45NDZ6TTIyLjQyNSAxOGgxLjk1bC0zLjkgOGgtMS45NXoiLz4KPC9zdmc+" />
+            <Text>Refer a Friend, Get $15</Text>
+          </HStack>
+          <HStack>
+            <Image
+              src="https://img.icons8.com/ios-filled/2x/task-completed.png"
+              width={"20px"}
+              height={"23px"}
+            />
+            <Text>New Customers Save 20%-Use Code NEWBIE</Text>
+          </HStack>
+          <HStack>
+            <Image src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxwYXRoIGNsYXNzPSJyZXNwb25zaXZlVXNwX2ljb25fc3ZnLWZpbGwiIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTE4LDIgTDE4LDIyIEw2LDIyIEw2LDIgTDE4LDIgWiBNMTIsMTkgQzExLjQ0NzcxNTMsMTkgMTEsMTkuNDQ3NzE1MyAxMSwyMCBDMTEsMjAuNTUyMjg0NyAxMS40NDc3MTUzLDIxIDEyLDIxIEMxMi41NTIyODQ3LDIxIDEzLDIwLjU1MjI4NDcgMTMsMjAgQzEzLDE5LjQ0NzcxNTMgMTIuNTUyMjg0NywxOSAxMiwxOSBaIE0xNiw1IEw4LDUgTDgsMTggTDE2LDE4IEwxNiw1IFogTTE0LDMgTDEwLDMgTDEwLDQgTDE0LDQgTDE0LDMgWiIvPgo8L3N2Zz4=" />
+            <Text>Download Our App</Text>
+          </HStack>
         </HStack>
-        <HStack>
-          <Image src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzkiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8cGF0aCBjbGFzcz0icmVzcG9uc2l2ZVVzcF9pY29uX3N2Zy1maWxsIiBkPSJNMjEuNDUgMjhjMy4yMyAwIDUuODUtMi42ODYgNS44NS02cy0yLjYyLTYtNS44NS02Yy0zLjIzIDAtNS44NSAyLjY4Ni01Ljg1IDZzMi42MiA2IDUuODUgNnptMCAyYy00LjMwOCAwLTcuOC0zLjU4Mi03LjgtOHMzLjQ5Mi04IDcuOC04IDcuOCAzLjU4MiA3LjggOC0zLjQ5MiA4LTcuOCA4eiIvPgoJPHBhdGggY2xhc3M9InJlc3BvbnNpdmVVc3BfaWNvbl9zdmctZmlsbCIgZD0iTTE1LjczMiAyNi43ODJjLTMuNDMtLjg0LTUuOTgyLTQuMDA2LTUuOTgyLTcuNzgyIDAtNC40MTggMy40OTItOCA3LjgtOCAyLjgxNCAwIDUuMjggMS41MjkgNi42NTIgMy44MmwtMS42NjIgMS4wNDdDMjEuNDgyIDE0LjA5OCAxOS42MSAxMyAxNy41NSAxM2MtMy4yMyAwLTUuODUgMi42ODYtNS44NSA2IDAgMi43OTIgMS44NzUgNS4xOTcgNC40ODUgNS44MzZsLS40NTMgMS45NDZ6TTIyLjQyNSAxOGgxLjk1bC0zLjkgOGgtMS45NXoiLz4KPC9zdmc+" />
-          <Text>Refer a Friend, Get $15</Text>
+      </Stack>
+      <Stack
+        width={"90%"}
+        h={"45px"}
+        border="0px solid orange"
+        m={"auto"}
+        backgroundColor={"black"}
+        color="white"
+        _hover={{ backgroundColor: "white", color: "black" }}
+        alignItems={"center"}
+        mb="20px"
+      >
+        <HStack
+          w={"80%"}
+          m="auto"
+          border="0px solid white"
+          alignItems={"center"}
+        >
+          <Text fontSize={"20px"}>
+            {" "}
+            <b>
+              25% off with code REPLAY + free PCA SKIN Rejuvenate and Hydrate
+              Duo (worth $33.50) @ $ 130+ | SHOP NOW{" "}
+            </b>{" "}
+          </Text>
         </HStack>
-        <HStack>
-          <Image src="https://img.icons8.com/ios-filled/2x/task-completed.png" width={"20px"} height={"23px"} />
-          <Text>New Customers Save 20%-Use Code NEWBIE</Text>
-        </HStack>
-        <HStack>
-          <Image src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxwYXRoIGNsYXNzPSJyZXNwb25zaXZlVXNwX2ljb25fc3ZnLWZpbGwiIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTE4LDIgTDE4LDIyIEw2LDIyIEw2LDIgTDE4LDIgWiBNMTIsMTkgQzExLjQ0NzcxNTMsMTkgMTEsMTkuNDQ3NzE1MyAxMSwyMCBDMTEsMjAuNTUyMjg0NyAxMS40NDc3MTUzLDIxIDEyLDIxIEMxMi41NTIyODQ3LDIxIDEzLDIwLjU1MjI4NDcgMTMsMjAgQzEzLDE5LjQ0NzcxNTMgMTIuNTUyMjg0NywxOSAxMiwxOSBaIE0xNiw1IEw4LDUgTDgsMTggTDE2LDE4IEwxNiw1IFogTTE0LDMgTDEwLDMgTDEwLDQgTDE0LDQgTDE0LDMgWiIvPgo8L3N2Zz4=" />
-          <Text>Download Our App</Text>
-        </HStack>
-      </HStack>
       </Stack>
     </>
   );
@@ -237,14 +274,14 @@ const DesktopNav = () => {
     <Box
       display={"flex"}
       spacing={1}
-      border={"1px solid black"}
+      border={"0px solid black"}
       ml="8%"
       width={"1300px"}
       justifyContent={"space-between"}
     >
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
-          <Popover trigger={"hover"} placement={"bottom-start"}>
+          <Popover trigger={"hover"} placement={"bottom-start"} >
             <PopoverTrigger>
               <Link
                 p={2}
@@ -270,8 +307,9 @@ const DesktopNav = () => {
                 p={4}
                 rounded={"sm"}
                 width={"auto"}
+            
               >
-                <HStack alignItems={"start"}>
+                <HStack alignItems={"start"}  >
                   {navItem.children.map((child) => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
@@ -295,7 +333,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
       rounded={"md"}
       _hover={{ bg: useColorModeValue("#EEEEE9") }}
     >
-      <Stack textAlign={"left"} spacing={2} borderTop={"1px solid gray"}>
+      <Stack textAlign={"left"} spacing={2} borderTop={"1px solid gray"} >
         <Box mt="15px">
           <Text
             transition={"all .3s ease"}
