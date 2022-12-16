@@ -1,10 +1,762 @@
 {
-  "posts": [
+  "products": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ]
- 
+      "id":1,
+      "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/13547805-1174926019137063.jpg",
+      "name": "SkinCeuticals Replenishing Anti-Aging Regimen Worth $332.00",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price": 292.16,
+      "type":"serum"
+
+  },
+  {
+      "id":2,
+      "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/13547804-2124926019007688.jpg",
+      "name": "SkinCeuticals Anti-Aging Radiance Duo Worth $296.00",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":260.48,
+      "type":"perfume"
+  },
+  {    
+       "id":3,
+      "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/13279307-1044898790795072.jpg",
+      "name": "SkinCeuticals Post-Injectable System",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":190,
+      "type":"skincare kit"
+
+  },
+  {   
+      "id":4,
+      "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/13547807-5554926019432371.jpg",
+      "name": "SkinCeuticals AM/PM Replenishing Antioxidant Regimen Worth $449",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price": 395,
+      "type":"skincare routine"
+  },
+
+
+  {    
+       "id":5,
+      "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/13279308-1124898791328007.jpg",
+      "name": "SkinCeuticals Post-Chemical Peel System",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price": 205,
+      "type":"facialcream"
+  },
+  {
+      "id":6,
+    "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13196078-1324889940505536.jpg",
+      "name": "SkinCeuticals Advanced Scar Control 1.7 fl. oz",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":110,
+      "type":"acnecream"
+  },
+  {    
+      "id":7,
+      "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13278621-1584891260833553.jpg",
+      "name": "Corrective Anti-Aging Luxe Night Kit",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":380,
+      "type":"night-kit"
+  },
+  {
+      "id":8,
+      "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13278622-2304891261064421.jpg",
+      "name": "SkinCeuticals x Slip: Vitamin C & Sunscreen Luxe Day Kit",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":280,
+      "type":"sunscreen cream"
+  },
+
+  {    
+      "id":9,
+      "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/13278623-1114891261385910.jpg",
+      "name": "SkinCeuticals x Slip Eye Duo",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":148,
+      "type":"eyes kit"
+  },
+  {    
+       "id":10,
+      "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13036144-1644892769995985.jpg",
+      "name": "SkinCeuticals Daily Brightening UV Defense Sunscreen SPF30 1 fl. oz",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":54,
+      "type":"sunscreen cream"
+  },
+  {    
+       "id":11,
+      "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12941160-7374871557827456.jpg",
+      "name": "SkinCeuticals Physical Fusion UV Defense SPF50 Sunscreen",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":34,
+      "type":"sunscreen cream"
+  },
+  {   
+      "id":12,
+      "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12771530-3164918929282606.jpg",
+      "name": "SkinCeuticals Silymarin CF Serum 1 fl. oz",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":166,
+      "type":"serum"
+  },
+
+  {    
+      "id":13,
+      "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12639082-1284892769599187.jpg",
+      "name": "SkinCeuticals Tripeptide-R Neck Repair 1.7oz",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":120,
+      "type":"facial cream"
+  },
+  {   
+       "id":14,
+      "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12611195-6384778701534407.jpg",
+      "name": "SkinCeuticals Tripeptide-R Neck Repair 1.7oz",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":120,
+      "type":"facial cream"
+  },
+  {    
+       "id":15,
+      "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12546098-1674764018462201.jpg",
+      "name": "SkinCeuticals Acne Skin System (Worth $173.00)",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":130,
+      "type":"acnecream"
+  },
+  {   
+      "id":16,
+      "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12309426-1464892769568764.jpg",
+      "name": "SkinCeuticals Glycolic Renewal Cleanser 5 fl.oz",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":30,
+      "type":"cleanser"
+  },
+
+
+  {   
+      "id":17,
+      "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12339500-6574717359524826.jpg",
+      "name": "SkinCeuticals Phyto+ and Serum 20 AOX Duo",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":230,
+      "type":"serum"
+  },
+  {    
+      "id":18,
+      "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12103843-1444870995724380.jpg",
+      "name": "SkinCeuticals Simply Clean Cleanser 11.8 fl. oz",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":45,
+      "type":"cleanser"
+  },
+  {   
+      "id":19,
+      "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12103844-1634870985978103.jpg",
+      "name": "SkinCeuticals Gentle Cleanser 11.8 fl. oz",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":45,
+      "type":"cleanser"
+  },
+  {   
+      "id":20,
+      "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12031613-2054892769485889.jpg",
+      "name": "SkinCeuticals Glycolic 10 Overnight Treatment 50ml",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":85,
+      "type":"night-kit"
+  },
+
+  {   
+      "id":21,
+      "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12024247-1024892769416454.jpg",
+      "name": "SkinCeuticals Brightening Skin System Set (Worth $368.00)",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price": 285,
+      "type":"brightning cream"
+  },
+  {    
+      "id":22,
+      "imageUrl": "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11976680-1624632279939375.jpg",
+      "name": "SkinCeuticals Refill and Nourish Regimen",
+      "discription": "SkinCeuticals Triple Lipid Restore 2:4:2 4ml Gift",
+      "price":385,
+      "type":"nourish"
+},
+{  
+  "id":23,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/original//productimg/original/12747907-1514871998779558.jpg",
+  "name": "DERMAdoctor KP Duty Body Scrub (Various Sizes)",
+  "discription": "DERMAdoctor Gift",
+  "type":"scrub",
+  "price": 32
+
+},
+{  
+   "id":24,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11287210-1584882191614736.jpg",
+  "name": "DERMAdoctor Kakadu C Brightening Daily Cleanser 7.1 oz Tube",
+  "discription": "DERMAdoctor Gift",
+  "price":38,
+  "type":"brightning cream"
+
+},
+{ 
+  "id":25,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11287222-1874871998236897.jpg",
+  "name": "DERMAdoctor Total Nonscents Ultra Gentle Brightening Antiperspirant",
+  "discription": "DERMAdoctor Gift",
+  "price":30,
+  "type":"brightning cream"
+
+},
+{  
+  "id":26,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11718351-1104866363990105.jpg",
+  "name": "DERMAdoctor Ain't Misbehavin' Medicated Acne Cleanser 7.1 oz",
+  "discription": "DERMAdoctor Gift",
+  "price":32,
+  "type":"acnecream"
+
+},
+{ 
+   "id":27,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11712346-3214896398286015.jpg",
+  "name": "DERMAdoctor Picture Porefect Pore Minimizer",
+  "discription": "DERMAdoctor Gift",
+  "price":42,
+  "type":"perfume"
+
+},
+{  
+  "id":28,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/11287208-2084871998090722.jpg",
+  "name": "DERMAdoctor Kakadu C 20% Vitamin C Serum with Ferulic Acid and Vitamin E",
+  "discription": "DERMAdoctor Gift",
+  "price":95,
+  "type":"serum"
+
+},
+{  
+  "id":29,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/11412607-8954864280050704.jpg",
+  "name": "DERMAdoctor Kakadu C Vitamin C Brightening Kit (Worth $129.00)",
+  "discription": "DERMAdoctor Gift",
+  "price":89,
+  "type":"brightning cream"
+
+},
+{  
+  "id":30,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/11412608-1034872055783974.jpg",
+  "name": "DERMAdoctor Med e Tate Antiperspirant Wipes (30 Pack)",
+  "discription": "DERMAdoctor Gift",
+  "price":48,
+  "type":"perfume"
+
+},
+{  
+  "id":31,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12187514-2304815573253458.jpg",
+  "name": "Elemis Pro-Collagen Rose Facial Oil 15ml",
+  "discription": "DERMAdoctor Gift",
+  "price":79,
+  "type":"facial oil"
+
+},
+{  
+  "id":32,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12698709-1824880131032636.jpg",
+  "name": "DERMAdoctor KP Duty Dermatologist  for Dry, Rough, Bumpy Skin 8 oz",
+  "discription": "DERMAdoctor Gift",
+  "price":38,
+  "type":"facial oil"
+
+},
+{ 
+  "id":33,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11290613-8274866327106473.jpg",
+  "name": "DERMAdoctor DD Cream Dermatologically Spectrum SPF 30",
+  "discription": "DERMAdoctor Gift",
+  "price":40,
+  "type":"sunscreen cream"
+
+},
+{  
+  "id":34,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12624607-9824815576214422.jpg",
+  "name": "Elemis Superfood AHA Glow Cleansing  90g",
+  "discription": "DERMAdoctor Gift",
+  "price":38,
+  "type":"cleanser"
+
+},
+{  
+  "id":35,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/10451465-6984815568966494.jpg",
+  "name": "Elemis Frangipani Monoi Body Oil 100ml",
+  "discription": "DERMAdoctor Gift",
+  "price":56,
+  "type":"body oil"
+
+},
+{ 
+  "id":36,
+ "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/10362741-1744840455658752.jpg",
+  "name": "Elemis Dynamic Resurfacing Facial Wash",
+  "discription": "DERMAdoctor Gift",
+  "price":49,
+  "type":"facialcream"
+
+},
+{  
+  "id":37,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12543334-1854815575687697.jpg",
+  "name": "Elemis Ultra Smart Enviro-Adapt Day50ml",
+  "discription": "$32 Elemis Gift",
+  "price":295,
+  "type":"nourish"
+
+},
+{  
+  "id":38,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/10621773-4934891242155358.jpg",
+  "name": "Elemis Pro-Collagen  Eye Treatment (15ml)",
+  "discription": "$32 Elemis Gift",
+  "price":68,
+  "type":"eyes kit"
+
+},
+{ 
+  "id":39,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11588128-5464550909161491.jpg",
+  "name": "Decorté Liposome Moisture Serum 1.3oz",
+  "discription": "30% off select Decorte + Gift",
+  "price": "66.50"
+
+},
+{
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12682868-2054802894273517.jpg",
+  "name": "Decorté Botanical Skincare Collection 6 Piece Set (Worth $161.00)",
+  "discription": "30% off select Decorte + Gift",
+  "price":80,
+  "type":"skincare routine"
+
+},
+{  
+  "id":40,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12682870-1654802894434596.jpg",
+  "name": "Decorté AQ Perfect Repair 7 Piece Set (Worth $250.00)",
+  "discription": "30% off select Decorte + Gift",
+  "price":152,
+   "type":"decoration"
+
+},
+{ 
+  "id":41,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12682869-1224802894336487.jpg",
+  "name": "Decorté Clean and Pure Facial Cleansing Essentials Set (Worth $139.00)",
+  "discription": "30% off select Decorte + Gift",
+  "price":80,
+  "type":"cleanser"
+
+},
+
+
+{ 
+  "id":42,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11995336-5244635651652236.jpg",
+  "name": "Decorté Vita De Rêve Lotion 10.1 fl. oz/300ml (Worth $90)",
+  "discription": "30% off select Decorte + Gift",
+  "price":75,
+  "type":"serum"
+
+},
+{  
+  "id":43,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12356557-7384717418093823.jpg",
+  "name": "Decorté AQ Moisture Layering Duo (Worth $190)",
+  "discription": "30% off select Decorte + Gift",
+  "price":161,
+  "type":"moisturizer"
+
+},
+{
+  "id":44,
+  "imageUrl": "https://static.thcdn.com/images/large/webp/productimg/1600/1600/12019079-1204653615170799.jpg",
+  "name": "Decorté Loose Powder 1oz (Various Shades)",
+  "discription": "30% off select Decorte + Gift",
+  "price":50,
+  "type":"powder"
+
+},
+{ 
+  "id":45,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12441879-1974736973748029.jpg",
+  "name": "Decorté AQ Lotion and Emulsion Duo",
+  "discription": "30% off select Decorte + Gift",
+  "price":190,
+  "type":"lotion"
+
+},
+
+
+{
+  "id":46,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/11759902-6104750524487590.jpg",
+  "name": "Decorté Prime Latte 150ml",
+  "discription": "30% off select Decorte + Gift",
+  "price":45,
+  "type":"powder"
+
+},
+{ 
+  "id":47,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/12144170-1574676149225227.jpg",
+  "name": "Decorté AQ Cleansing Cream 4.1oz",
+  "discription": "30% off select Decorte + Gift",
+  "price":60,
+  "type":"cleanser"
+
+},
+{ 
+  "id":48,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12462157-1984747708061949.jpg",
+  "name": "Decorté Lip Oil - Fuchsia Rose 04 0.15 fl. Oz.",
+  "discription": "30% off select Decorte + Gift",
+  "price":27,
+  "type":"lipstick"
+
+},
+{ 
+  "id":49,
+  "imageUrl": "https://static.thcdn.com/images/large/webp/productimg/1600/1600/11691717-2104561042713873.jpg",
+  "name": "Decorté Cream Blusher (Various Shades)",
+  "discription": "30% off select Decorte + Gift",
+  "price":35,
+  "type":"facialcream"
+
+},
+
+
+{ 
+  "id":50,
+  "imageUrl": "https://static.thcdn.com/images/large/webp/productimg/1600/1600/11691687-1954561040135898.jpg",
+  "name": "Decorté Eye Glow Gem (Various Shades)",
+  "discription": "30% off select Decorte + Gift",
+  "price":27,
+  "type":"eyes kit"
+
+},
+{
+  "id":51,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11588125-9294529913768699.jpg",
+  "name": "Decorté Liposome Eye Cream 15ml",
+  "discription": "30% off select Decorte + Gift",
+  "price":62,
+  "type":"eyes kit"
+
+},
+{
+  "id":52,
+  "imageUrl": "https://static.thcdn.com/images/large/webp/productimg/1600/1600/11588133-1774529914238919.jpg",
+  "name": "Decorté Vi-Fusion Intro Skincare Kit (Worth $262)",
+  "discription": "30% off select Decorte + Gift",
+  "price":200,
+  "type":"skincare kit"
+
+},
+{  
+  "id":53,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11759904-1614586382704109.jpg",
+  "name": "Decorté Eye & Lip Makeup Remover",
+  "discription": "30% off select Decorte + Gift",
+  "price":18,
+  "type":"makeup remover"
+
+},
+
+{
+  "id":54,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12144169-1004731376886103.jpg",
+  "name": "Decorté AQ Peel Off Lifting Mask 2.9oz",
+  "discription": "30% off select Decorte + Gift",
+  "price": 195,
+  "type":"facemask"
+
+},
+{ 
+  "id":55,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12706871-5264918200667656.jpg",
+  "name": "Decorté Purifying Foam Cleanser 125m",
+  "discription": "30% off select Decorte + Gift",
+  "price":40,
+  "type":"cleanser"
+
+},
+{ 
+  "id":56,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11588129-1454529914064634.jpg",
+  "name": "Decorté Vi-Fusion 24/7 Eye Cream 0.53oz",
+  "discription": "30% off select Decorte + Gift",
+  "price":150,
+  "type":"eyes kit"
+
+},
+{
+  "id":57,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/12144171-1664676149378437.jpg",
+  "name": "Decorté AQ Washing Cream 4.5oz",
+  "discription": "30% off select Decorte + Gift",
+  "price":50,
+  "type":"facial cream"
+
+},
+
+{ 
+  "id":58,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12521563-2034762955030880.jpg",
+  "name": "Decorté Whitelogist Brightening Correcting Serum with Kohic Acid 40ml",
+  "discription": "30% off select Decorte + Gift",
+  "price":140,
+  "type":"brightning cream"
+
+},
+{ 
+  "id":59,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12356556-8114717417767657.jpg",
+  "name": "Decorté Prime Latte Bundle (Worth $105.00)",
+  "discription": "30% off select Decorte + Gift",
+  "price":99,
+  "type":"powder"
+
+},
+{
+  "id":60,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/13011542-7184857487015749.jpg",
+  "name": "Decorté Kimono Yui Eau De Toilette 1.7 fl. oz",
+  "discription": "30% off select Decorte + Gift",
+  "price":75,
+  "type":"facial cream"
+
+},
+{  
+  "id":61,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13232824-1904908361586136.jpg",
+  "name": "SkinStore Holiday Edit 2021 (Worth Over",
+  "discription": "50% off SkinStore ",
+  "price":75,
+  "type":"night-kit"
+
+},
+{ 
+  "id":62,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13468234-5434916661811767.jpg",
+  "name": "Decorté Liposome Advanced Repair Serum",
+  "discription": "$33 Decorté Gift",
+  "price":500,
+  "type":"serum"
+
+},
+{ 
+  "id":63,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13422147-2054909926994386.jpg",
+  "name": "VIRTUE 6-in-1 Styling Paste 150ml",
+  "discription": "VIRTUE Gift",
+  "price":220,
+  "type":"facial oil"
+
+},
+{ 
+  "id":64,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/13461935-1424911141630369.jpg",
+  "name": "Bloom and Blossom Comfort",
+  "discription": "Winter Sale- Up to 50% off",
+  "price":240,
+  "type":"perfume"
+
+},
+{  
+  "id":65,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/13208347-1024894854814398.jpg",
+  "name": "ghd Exclusive Starter Pack (Worth $314.00)",
+  "discription": "Winter Sale- Up to 50% off",
+  "price":40,
+  "type":"eyes kit"
+
+},
+{ 
+  "id":66,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13457158-7614909353366306.jpg",
+  "name": "FOREO ISSA Hybrid Wave Brush Head (Various Shades)",
+  "discription": "Select your Gift",
+  "price":599,
+  "type":"body oil"
+
+},
+{  
+  "id":67,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13482949-1274921017596166.jpg",
+  "name": "Beauty ORA 360-Degree Roller",
+  "discription": "15% off use code SS15 ",
+  "price":450,
+  "type":"nourish"
+
+},
+{
+  "id":68,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/13225569-6864915280569197.jpg",
+  "name": "Philip B Forever Shine Travel Set",
+  "discription": "Winter Sale 50% off  ",
+  "price":425,
+  "type":"shampoo"
+
+},
+{ 
+  "id":69,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13208345-9064895081911374.jpg",
+  "name": "Bloom and Blossom Body and Soul ",
+  "discription": "Winter Sale 50% off ",
+  "price":345,
+  "type":"body oil"
+
+},
+{ 
+  "id":70,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13522035-9514924731935292.jpg",
+  "name": "First Aid Beauty Hello Fab Coconut Water Cream  ",
+  "discription": "15% off use code SS15  ",
+  "price":450,
+  "type":"acnecream"
+
+},
+{ 
+  "id":71,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12669032-2024870955666082.jpg",
+  "name": "Relaxing Body Oil 100ml  ",
+  "discription": "15% off use code SS15  ",
+  "price": 300,
+  "type":"body oil"
+
+},
+{ 
+  "id":72,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13436007-4544906227704997.jpg",
+  "name": "ghd Thin Wand - 0.5  ",
+  "discription": "Select your Gift  ",
+  "price":150,
+  "type":"acnecream"
+
+},
+{ 
+  "id":73,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13452934-9484924197336270.jpg",
+  "name": "Dermalogica Awaken Peptide Eye Gel 15ml  ",
+  "discription": "$42 Dermalogica Gift  ",
+  "price":200,
+  "type":"eyes kit"
+
+},
+{  
+  "id":74,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13479041-1404911498472224.jpg",
+  "name": "VIRTUE Curl Leave-in Butter 150ml ",
+  "discription": "VIRTUE Gift  ",
+  "price":443,
+  "type":"serum"
+
+},
+{ 
+  "id":75,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13502372-2334921017357894.jpg",
+  "name": "Beauty ORA Facial Ice Globes Duo ",
+  "discription": "15% off use code SS15 ",
+  "price":190,
+  "type":"facial cream"
+
+},
+{ 
+  "id":76,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13506923-2024925456566434.jpg",
+  "name": "Bloom and Blossom Smooth Moves Facial Oil 150ml ",
+  "discription": "VIRTUE Gift  ",
+  "price":700,
+  "type":"facial oil"
+
+},
+{ 
+  "id":77,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13445706-7844918668913221.jpg",
+  "name": "Dr. Dennis Gross Advanced Retinol ",
+  "discription": "Dr Dennis Gross Gift ",
+  "price":850,
+  "type":"serum"
+
+},
+{ 
+  "id":78,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13482948-6934921017212661.jpg",
+  "name": "Beauty ORA 360-Degree Roller  ",
+  "discription": "15% off use code SS15 ",
+  "price":650,
+  "type":"shampoo"
+
+},
+{ 
+  "id":79,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13232822-1544908361367298.jpg",
+  "name": "SkinStore Selects Limited Edition Collection (Worth Over $350)  ",
+  "discription": "winter Sale- Up to 50%  ",
+  "price":500,
+  "type":"skincare routine"
+
+},
+{  
+  "id":80,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13277669-4614905728591652.jpg",
+  "name": "ALPHA-H Melting Moment Cleansing Balm 90g  ",
+  "discription": "winter Sale- Up to 50%  ",
+  "price": 350,
+  "type":"cleanser"
+
+},
+{ 
+  "id":81,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13225568-1364915280507820.jpg",
+  "name": "Philip B Weightless Weekender Collection Set (Worth $84.00)",
+  "discription": "Winter Sale- Up to 50%  ",
+  "price":600,
+  "type":"shampoo"
+
+},
+{ 
+  "id":82,
+  "imageUrl": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13485839-1944912987170825.jpg",
+  "name": "The Ordinary Natural Moisturizing Factors and HA 100ml (Three Pack)",
+  "discription": "Winter Sale- Up to 50%  ",
+  "price":250,
+  "type":"moisturizer"
+
+},
+{ 
+  "id":83,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/13485834-1744912989374277.jpg",
+  "name": "The Ordinary Hyaluronic Acid 2% and B5  30ml (Three Pack)",
+  "discription": "Select your Gift  ",
+  "price":280,
+  "type":"serum"
+
+},
+{ 
+  "id":84,
+  "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12902306-1244904188292712.jpg",
+  "name": "Miriam Quevedo Platinum and Diamonds Luxurious Shampoo 250ml",
+  "discription": "Select your Gift  ",
+  "price":525,
+  "type":"shampoo"
+
+  }
+ ]
 }
