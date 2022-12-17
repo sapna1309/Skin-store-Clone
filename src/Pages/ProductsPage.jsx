@@ -1116,7 +1116,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Alpha Hydroxy Acids (7)</Text>
+            <Text fontWeight={"thin"} >Suitable for Infants (7)</Text>
           </HStack>
           <HStack>
             <button
@@ -1127,7 +1127,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Amino Acids (271)</Text>
+            <Text fontWeight={"thin"} >Suitable for Pregnant Women (271)</Text>
           </HStack>
           <HStack>
             <button
@@ -1138,7 +1138,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Antioxidants (772)</Text>
+            <Text fontWeight={"thin"} >Sulfate Free (772)</Text>
           </HStack>
           <HStack>
             <button
@@ -1149,7 +1149,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Arnica (31)</Text>
+            <Text fontWeight={"thin"} >Vegan (31)</Text>
           </HStack>
           <HStack>
             <button
@@ -1160,7 +1160,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Avocado Oil (9)</Text>
+            <Text fontWeight={"thin"} >Gluten Free (9)</Text>
           </HStack>
           <HStack>
             <button
@@ -1171,7 +1171,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Boitin (25)</Text>
+            <Text fontWeight={"thin"} >Fragrance free (25)</Text>
           </HStack>
           <HStack>
             <button
@@ -1182,7 +1182,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Blueberry (1)</Text>
+            <Text fontWeight={"thin"} >Cruelty Free (1)</Text>
           </HStack>
           <HStack>
             <button
@@ -1193,7 +1193,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Caffeine (89)</Text>
+            <Text fontWeight={"thin"} >Contains SPF (89)</Text>
           </HStack>
           <HStack>
             <button
@@ -1204,7 +1204,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Castor oil (95)</Text>
+            <Text fontWeight={"thin"} >BHT Free (95)</Text>
           </HStack>
           <HStack>
             <button
@@ -1215,7 +1215,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Caramides (84)</Text>
+            <Text fontWeight={"thin"} >Certified Orgainics (84)</Text>
           </HStack>
           <HStack>
             <button
@@ -1226,7 +1226,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Conflower (16)</Text>
+            <Text fontWeight={"thin"} >Alcohol Free (16)</Text>
           </HStack>
           <HStack>
             <button
@@ -1237,7 +1237,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >DMAE (26)</Text>
+            <Text fontWeight={"thin"} >Clean (41)</Text>
           </HStack>
           <HStack>
             <button
@@ -1248,7 +1248,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >French Clay (6)</Text>
+            <Text fontWeight={"thin"} >Mineral Based (6)</Text>
           </HStack>
         </Stack>
       </Box>
