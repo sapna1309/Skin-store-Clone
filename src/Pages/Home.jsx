@@ -9,10 +9,6 @@ const styleHeadings = {
   fontWeight: "500",
 };
 
-const styleBodyText = {
-  fontFamily: "Lato-Lighter,Helvetica,Arial,sans-serif",
-};
-
 export default function Home() {
   return (
     <Box width={"90%"} m={"auto"}>
