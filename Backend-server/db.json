@@ -334,10 +334,12 @@
   "imageUrl": "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11588128-5464550909161491.jpg",
   "name": "Decorté Liposome Moisture Serum 1.3oz",
   "discription": "30% off select Decorte + Gift",
-  "price": "66.50"
+  "price": 66,
+  "type":"serum"
 
 },
-{
+{ 
+  "id":85,
   "imageUrl": "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12682868-2054802894273517.jpg",
   "name": "Decorté Botanical Skincare Collection 6 Piece Set (Worth $161.00)",
   "discription": "30% off select Decorte + Gift",
