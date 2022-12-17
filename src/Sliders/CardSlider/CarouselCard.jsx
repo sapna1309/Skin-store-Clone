@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Text,Image, Box } from "@chakra-ui/react";
 export default function CardCarousel({ name, price, imageUrl, id }) {
-  return (
+return (
     <Box mb={"35px"} ml={"7px"} mr={"7px"} textAlign={"left"} border={"0px solid green"} zIndex={-9999}>
       <Image src={imageUrl} alt={name} mb={"50px"}  />
       <Text noOfLines={2} mb={"20px"} >{name}</Text>
@@ -21,7 +21,7 @@ export default function CardCarousel({ name, price, imageUrl, id }) {
         backgroundColor={"black"}
         color="white"
         borderRadius={"none"}
-        _hover={{ backgroundColor: "#28bdb7", color: "black" }}
+        _hover={{ backgroundColor: "#28bdb7", color: "black",cursor:"pointer" }}
         paddingX={"6.6rem"}
         mb={"10px"}
       >

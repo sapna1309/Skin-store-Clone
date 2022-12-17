@@ -25,6 +25,7 @@ import {
   PopoverContent,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { useNavigate,Link as HomeLink } from "react-router-dom";
 
 const Links = ["Dashboard", "Projects", "Team"];
 
@@ -44,6 +45,9 @@ const NavLink = () => (
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { isOpenMenu, onToggle } = useDisclosure();
+
+ const navigate = useNavigate();
+
   return (
     <>
       {/* // Navbar Starts// */}
@@ -62,13 +66,17 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box>
+            
+            <HomeLink to="/">
+             <Box>
               <Image
                 src={`https://i.ibb.co/tb29NvM/project-logo-1.png`}
                 ml="50px"
                 width="55%"
               />
-            </Box>
+               </Box>
+              </HomeLink>
+           
           </HStack>
 
           <InputGroup w="35%" mr="200px" border={"1px solid #D2D5D2"}>
@@ -102,6 +110,7 @@ export default function Navbar() {
                   cursor={"pointer"}
                   minW={0}
                 >
+                  
                   <Avatar
                     size={"sm"}
                     src={
@@ -111,7 +120,7 @@ export default function Navbar() {
                 </MenuButton>
                 <Text>Account</Text>
                 <MenuList>
-                  <MenuItem>Login</MenuItem>
+                  <MenuItem onClick={()=>navigate('/login')}>Login</MenuItem>
                   <MenuItem>Register</MenuItem>
                   <MenuDivider />
                   <MenuItem>Wishlist</MenuItem>
@@ -323,10 +332,9 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }) => {
+const DesktopSubNav = ({ label, subLabel }) => {
   return (
-    <Link
-      href={href}
+    <HomeLink to="/products"
       role={"group"}
       display={"block"}
       p={2}
@@ -349,7 +357,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
           </Text>
         ))}
       </Stack>
-    </Link>
+    </HomeLink>
   );
 };
 
