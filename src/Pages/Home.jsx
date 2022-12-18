@@ -2,6 +2,9 @@ import React from "react";
 import { Box, Stack, Text, HStack, Image, Button } from "@chakra-ui/react";
 import HeadCrousel from "../Sliders/HeaderCarousel";
 import CardSlider, { CardSlider1 } from "../Sliders/CardSlider/FinalCarousel";
+
+
+
 const styleHeadings = {
   fontFamily: "Lato-Regular,Helvetica,Arial,sans-serif",
   fontSize: "40px",
@@ -10,6 +13,9 @@ const styleHeadings = {
 };
 
 export default function Home() {
+
+
+
   return (
     <Box width={"90%"} m={"auto"}>
       <HeadCrousel />
@@ -249,7 +255,7 @@ export default function Home() {
         </HStack>
        </Box>
        
-       <Stack w={"100%"} mt={"40px"} borderBottom={"1px solid gray"} mb="30px">
+       <Stack w={"100%"} mt={"40px"} borderBottom={"1px solid gray"}>
         <Box border={"0px solid black"} mb="20px">
         <Image src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/33/Skinstore_August_Referral_-_Untitled_Page_%281%29-022033.png" />
         </Box>

@@ -2,8 +2,8 @@ import { Box, HStack, Stack, Text, Button, Image } from "@chakra-ui/react";
 
 export default function Footer() {
   return (
-    <Box w={"80%"} m="auto">
-      <HStack w={"100%"} border={"0px solid black"} m="auto" borderBottom={"1px solid gray"} mb="40px"  >
+    <Box w={"80%"} m="auto"  borderTop={"1px solid gray"}  >
+      <HStack w={"100%"} border={"0px solid black"} m="auto" borderBottom={"1px solid gray"} mb="40px" mt={"50px"} >
         {/* leftt-side */}
         <Stack
           spacing={5}

@@ -6,7 +6,9 @@ import {
   Stack,
   Text,
   Link,
-} from "@chakra-ui/layout";
+  Select,
+  Button,
+} from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Link as GoToHome } from "react-router-dom";
 import { getData } from "../Utility/Api";
@@ -31,17 +33,17 @@ export default function ProductPage() {
 
   return (
     <HStack
-      width={"90%"}
+      width={"85%"}
       m={"auto"}
-      border={"1px solid red"}
+      border={"0px solid red"}
       justifyContent={"space-between"}
       alignItems={"start"}
     >
       <Box
         display={"flex"}
         flexDirection={"column"}
-        width={"30%"}
-        border={"1px solid red"}
+        width={"25%"}
+        border={"0px solid red"}
         textAlign={"left"}
       >
         <GoToHome to="/">
@@ -50,17 +52,22 @@ export default function ProductPage() {
           </Link>{" "}
           / SkinCare / View All Details{" "}
         </GoToHome>
-        <Text mt={"50px"} mb={"10px"} fontSize={"22px"}>
+        <Text mt={"50px"} mb={"15px"} fontSize={"22px"}>
           {" "}
           <b> Refine </b>{" "}
         </Text>
         <hr style={{ backgroundColor: "gray", height: "0.5px" }} />
-        <Text mt={"50px"} mb={"10px"}>
+        <Text mt={"50px"} mb={"15px"}>
           {" "}
           <b> Brand </b>{" "}
         </Text>
-        <Stack spacing={2} borderTop={"1px solid gray"} h={"170px"} overflowY={"scroll"}>
-          <HStack mt={"15px"} >
+        <Stack
+          spacing={3}
+          borderTop={"1px solid gray"}
+          h={"185px"}
+          overflowY={"scroll"}
+        >
+          <HStack mt={"15px"}>
             <button
               style={{
                 border: "1px solid gray",
@@ -113,7 +120,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >AHAVA(23)</Text>
+            <Text fontWeight={"thin"}>AHAVA(23)</Text>
           </HStack>
           <HStack>
             <button
@@ -124,7 +131,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Alo (3)</Text>
+            <Text fontWeight={"thin"}>Alo (3)</Text>
           </HStack>
           <HStack>
             <button
@@ -135,7 +142,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Alpha-H (19)</Text>
+            <Text fontWeight={"thin"}>Alpha-H (19)</Text>
           </HStack>
           <HStack>
             <button
@@ -146,7 +153,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Alchimie-Forever (16)</Text>
+            <Text fontWeight={"thin"}>Alchimie-Forever (16)</Text>
           </HStack>
           <HStack>
             <button
@@ -157,7 +164,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >ALGENIST (28)</Text>
+            <Text fontWeight={"thin"}>ALGENIST (28)</Text>
           </HStack>
           <HStack>
             <button
@@ -168,7 +175,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Alrux (4)</Text>
+            <Text fontWeight={"thin"}>Alrux (4)</Text>
           </HStack>
           <HStack>
             <button
@@ -179,7 +186,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Beauty ORA (10)</Text>
+            <Text fontWeight={"thin"}>Beauty ORA (10)</Text>
           </HStack>
           <HStack>
             <button
@@ -190,7 +197,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Beauty State (8)</Text>
+            <Text fontWeight={"thin"}>Beauty State (8)</Text>
           </HStack>
           <HStack>
             <button
@@ -201,7 +208,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Bioderma (21)</Text>
+            <Text fontWeight={"thin"}>Bioderma (21)</Text>
           </HStack>
           <HStack>
             <button
@@ -212,7 +219,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Alpha-H (19)</Text>
+            <Text fontWeight={"thin"}>Alpha-H (19)</Text>
           </HStack>
           <HStack>
             <button
@@ -223,16 +230,20 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Alpha-H (19)</Text>
+            <Text fontWeight={"thin"}>Alpha-H (19)</Text>
           </HStack>
-          
         </Stack>
-        <Text mt={"20px"} mb={"10px"}>
+        <Text mt={"20px"} mb={"15px"}>
           {" "}
           <b> Skin Care Product Type </b>{" "}
         </Text>
-        <Stack spacing={2} borderTop={"1px solid gray"} h={"170px"} overflowY={"scroll"}>
-          <HStack mt={"15px"} >
+        <Stack
+          spacing={3}
+          borderTop={"1px solid gray"}
+          h={"185px"}
+          overflowY={"scroll"}
+        >
+          <HStack mt={"15px"}>
             <button
               style={{
                 border: "1px solid gray",
@@ -285,7 +296,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Exfoliators (367)</Text>
+            <Text fontWeight={"thin"}>Exfoliators (367)</Text>
           </HStack>
           <HStack>
             <button
@@ -296,7 +307,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >skinCare Routine (125)</Text>
+            <Text fontWeight={"thin"}>skinCare Routine (125)</Text>
           </HStack>
           <HStack>
             <button
@@ -307,7 +318,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Facial Cream (19)</Text>
+            <Text fontWeight={"thin"}>Facial Cream (19)</Text>
           </HStack>
           <HStack>
             <button
@@ -318,7 +329,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Sunscreen cream (16)</Text>
+            <Text fontWeight={"thin"}>Sunscreen cream (16)</Text>
           </HStack>
           <HStack>
             <button
@@ -329,7 +340,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Night kit (28)</Text>
+            <Text fontWeight={"thin"}>Night kit (28)</Text>
           </HStack>
           <HStack>
             <button
@@ -340,7 +351,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Scrub (4)</Text>
+            <Text fontWeight={"thin"}>Scrub (4)</Text>
           </HStack>
           <HStack>
             <button
@@ -351,7 +362,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Facial Oil (10)</Text>
+            <Text fontWeight={"thin"}>Facial Oil (10)</Text>
           </HStack>
           <HStack>
             <button
@@ -362,7 +373,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Body Oil (8)</Text>
+            <Text fontWeight={"thin"}>Body Oil (8)</Text>
           </HStack>
           <HStack>
             <button
@@ -373,7 +384,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Eye Care (21)</Text>
+            <Text fontWeight={"thin"}>Eye Care (21)</Text>
           </HStack>
           <HStack>
             <button
@@ -384,7 +395,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Powder (19)</Text>
+            <Text fontWeight={"thin"}>Powder (19)</Text>
           </HStack>
           <HStack>
             <button
@@ -395,16 +406,20 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Acne cream (19)</Text>
+            <Text fontWeight={"thin"}>Acne cream (19)</Text>
           </HStack>
-          
         </Stack>
-        <Text mt={"20px"} mb={"10px"}>
+        <Text mt={"20px"} mb={"15px"}>
           {" "}
           <b> Skin Care Tools </b>{" "}
         </Text>
-        <Stack spacing={2} borderTop={"1px solid gray"} h={"170px"} overflowY={"scroll"}>
-          <HStack mt={"15px"} >
+        <Stack
+          spacing={3}
+          borderTop={"1px solid gray"}
+          h={"185px"}
+          overflowY={"scroll"}
+        >
+          <HStack mt={"15px"}>
             <button
               style={{
                 border: "1px solid gray",
@@ -457,7 +472,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Face Sponges (3)</Text>
+            <Text fontWeight={"thin"}>Face Sponges (3)</Text>
           </HStack>
           <HStack>
             <button
@@ -468,7 +483,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >skinCare System (58)</Text>
+            <Text fontWeight={"thin"}>skinCare System (58)</Text>
           </HStack>
           <HStack>
             <button
@@ -479,7 +494,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Face Clothes and flannels (11)</Text>
+            <Text fontWeight={"thin"}>Face Clothes and flannels (11)</Text>
           </HStack>
           <HStack>
             <button
@@ -490,7 +505,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Eye Massager (10)</Text>
+            <Text fontWeight={"thin"}>Eye Massager (10)</Text>
           </HStack>
           <HStack>
             <button
@@ -501,15 +516,20 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Oiling Tool (4)</Text>
+            <Text fontWeight={"thin"}>Oiling Tool (4)</Text>
           </HStack>
         </Stack>
-        <Text mt={"20px"} mb={"10px"}>
+        <Text mt={"20px"} mb={"15px"}>
           {" "}
           <b> Skin Type </b>{" "}
         </Text>
-        <Stack spacing={2} borderTop={"1px solid gray"} h={"170px"} overflowY={"scroll"}>
-          <HStack mt={"15px"} >
+        <Stack
+          spacing={3}
+          borderTop={"1px solid gray"}
+          h={"185px"}
+          overflowY={"scroll"}
+        >
+          <HStack mt={"15px"}>
             <button
               style={{
                 border: "1px solid gray",
@@ -562,7 +582,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Sensitive (1080)</Text>
+            <Text fontWeight={"thin"}>Sensitive (1080)</Text>
           </HStack>
           <HStack>
             <button
@@ -573,7 +593,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Dry (1284)</Text>
+            <Text fontWeight={"thin"}>Dry (1284)</Text>
           </HStack>
           <HStack>
             <button
@@ -584,7 +604,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Combination (1188)</Text>
+            <Text fontWeight={"thin"}>Combination (1188)</Text>
           </HStack>
           <HStack>
             <button
@@ -595,15 +615,20 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Dehydrated (88)</Text>
+            <Text fontWeight={"thin"}>Dehydrated (88)</Text>
           </HStack>
         </Stack>
-        <Text mt={"20px"} mb={"10px"}>
+        <Text mt={"20px"} mb={"15px"}>
           {" "}
           <b> Skin Care Concern </b>{" "}
         </Text>
-        <Stack spacing={2} borderTop={"1px solid gray"} h={"170px"} overflowY={"scroll"}>
-          <HStack mt={"15px"} >
+        <Stack
+          spacing={3}
+          borderTop={"1px solid gray"}
+          h={"185px"}
+          overflowY={"scroll"}
+        >
+          <HStack mt={"15px"}>
             <button
               style={{
                 border: "1px solid gray",
@@ -656,7 +681,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Dullness (312)</Text>
+            <Text fontWeight={"thin"}>Dullness (312)</Text>
           </HStack>
           <HStack>
             <button
@@ -667,7 +692,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Blemishes (234)</Text>
+            <Text fontWeight={"thin"}>Blemishes (234)</Text>
           </HStack>
           <HStack>
             <button
@@ -678,7 +703,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Visible pores (193)</Text>
+            <Text fontWeight={"thin"}>Visible pores (193)</Text>
           </HStack>
           <HStack>
             <button
@@ -689,7 +714,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Dark Circles & Puffiness (179)</Text>
+            <Text fontWeight={"thin"}>Dark Circles & Puffiness (179)</Text>
           </HStack>
           <HStack>
             <button
@@ -700,7 +725,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Redness & Rosacea (113)</Text>
+            <Text fontWeight={"thin"}>Redness & Rosacea (113)</Text>
           </HStack>
           <HStack>
             <button
@@ -711,15 +736,20 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Lack of Firmness (107)</Text>
+            <Text fontWeight={"thin"}>Lack of Firmness (107)</Text>
           </HStack>
         </Stack>
-        <Text mt={"20px"} mb={"10px"}>
+        <Text mt={"20px"} mb={"15px"}>
           {" "}
           <b> SPF Content </b>{" "}
         </Text>
-        <Stack spacing={2} borderTop={"1px solid gray"} h={"170px"} overflowY={"scroll"}>
-          <HStack mt={"15px"} >
+        <Stack
+          spacing={3}
+          borderTop={"1px solid gray"}
+          h={"185px"}
+          overflowY={"scroll"}
+        >
+          <HStack mt={"15px"}>
             <button
               style={{
                 border: "1px solid gray",
@@ -772,7 +802,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >SPF 50+ (115)</Text>
+            <Text fontWeight={"thin"}>SPF 50+ (115)</Text>
           </HStack>
           <HStack>
             <button
@@ -783,15 +813,15 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >SPF 40+ (105)</Text>
+            <Text fontWeight={"thin"}>SPF 40+ (105)</Text>
           </HStack>
         </Stack>
-        <Text mt={"20px"} mb={"10px"}>
+        <Text mt={"20px"} mb={"15px"}>
           {" "}
           <b> Skin Care Lips </b>{" "}
         </Text>
-        <Stack spacing={2} borderTop={"1px solid gray"} h={"100px"}>
-          <HStack mt={"15px"} >
+        <Stack spacing={3} borderTop={"1px solid gray"} h={"110px"}>
+          <HStack mt={"15px"}>
             <button
               style={{
                 border: "1px solid gray",
@@ -824,14 +854,13 @@ export default function ProductPage() {
             ></button>
             <Text fontWeight={"thin"}>Lip Treatment (81)</Text>
           </HStack>
-          
         </Stack>
-        <Text mt={"20px"} mb={"10px"}>
+        <Text mt={"20px"} mb={"15px"}>
           {" "}
           <b> Skin care Day Night </b>{" "}
         </Text>
-        <Stack spacing={2} borderTop={"1px solid gray"} h={"100px"}>
-          <HStack mt={"15px"} >
+        <Stack spacing={3} borderTop={"1px solid gray"} h={"110px"}>
+          <HStack mt={"15px"}>
             <button
               style={{
                 border: "1px solid gray",
@@ -865,12 +894,17 @@ export default function ProductPage() {
             <Text fontWeight={"thin"}>Night (1044)</Text>
           </HStack>
         </Stack>
-        <Text mt={"20px"} mb={"10px"}>
+        <Text mt={"20px"} mb={"15px"}>
           {" "}
           <b> Key Ingredients </b>{" "}
         </Text>
-        <Stack spacing={2} borderTop={"1px solid gray"} h={"170px"} overflowY={"scroll"}>
-          <HStack mt={"15px"} >
+        <Stack
+          spacing={3}
+          borderTop={"1px solid gray"}
+          h={"185px"}
+          overflowY={"scroll"}
+        >
+          <HStack mt={"15px"}>
             <button
               style={{
                 border: "1px solid gray",
@@ -923,7 +957,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Alpha Hydroxy Acids (7)</Text>
+            <Text fontWeight={"thin"}>Alpha Hydroxy Acids (7)</Text>
           </HStack>
           <HStack>
             <button
@@ -934,7 +968,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Amino Acids (271)</Text>
+            <Text fontWeight={"thin"}>Amino Acids (271)</Text>
           </HStack>
           <HStack>
             <button
@@ -945,7 +979,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Antioxidants (772)</Text>
+            <Text fontWeight={"thin"}>Antioxidants (772)</Text>
           </HStack>
           <HStack>
             <button
@@ -956,7 +990,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Arnica (31)</Text>
+            <Text fontWeight={"thin"}>Arnica (31)</Text>
           </HStack>
           <HStack>
             <button
@@ -967,7 +1001,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Avocado Oil (9)</Text>
+            <Text fontWeight={"thin"}>Avocado Oil (9)</Text>
           </HStack>
           <HStack>
             <button
@@ -978,7 +1012,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Boitin (25)</Text>
+            <Text fontWeight={"thin"}>Boitin (25)</Text>
           </HStack>
           <HStack>
             <button
@@ -989,7 +1023,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Blueberry (1)</Text>
+            <Text fontWeight={"thin"}>Blueberry (1)</Text>
           </HStack>
           <HStack>
             <button
@@ -1000,7 +1034,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Caffeine (89)</Text>
+            <Text fontWeight={"thin"}>Caffeine (89)</Text>
           </HStack>
           <HStack>
             <button
@@ -1011,7 +1045,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Castor oil (95)</Text>
+            <Text fontWeight={"thin"}>Castor oil (95)</Text>
           </HStack>
           <HStack>
             <button
@@ -1022,7 +1056,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Caramides (84)</Text>
+            <Text fontWeight={"thin"}>Caramides (84)</Text>
           </HStack>
           <HStack>
             <button
@@ -1033,7 +1067,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Conflower (16)</Text>
+            <Text fontWeight={"thin"}>Conflower (16)</Text>
           </HStack>
           <HStack>
             <button
@@ -1044,7 +1078,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >DMAE (26)</Text>
+            <Text fontWeight={"thin"}>DMAE (26)</Text>
           </HStack>
           <HStack>
             <button
@@ -1055,15 +1089,20 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >French Clay (6)</Text>
+            <Text fontWeight={"thin"}>French Clay (6)</Text>
           </HStack>
         </Stack>
-        <Text mt={"20px"} mb={"10px"}>
+        <Text mt={"20px"} mb={"15px"}>
           {" "}
           <b> Preferences </b>{" "}
         </Text>
-        <Stack spacing={2} borderTop={"1px solid gray"} h={"170px"} overflowY={"scroll"}>
-          <HStack mt={"15px"} >
+        <Stack
+          spacing={3}
+          borderTop={"1px solid gray"}
+          h={"185px"}
+          overflowY={"scroll"}
+        >
+          <HStack mt={"15px"}>
             <button
               style={{
                 border: "1px solid gray",
@@ -1116,7 +1155,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Suitable for Infants (7)</Text>
+            <Text fontWeight={"thin"}>Suitable for Infants (7)</Text>
           </HStack>
           <HStack>
             <button
@@ -1127,7 +1166,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Suitable for Pregnant Women (271)</Text>
+            <Text fontWeight={"thin"}>Suitable for Pregnant Women (271)</Text>
           </HStack>
           <HStack>
             <button
@@ -1138,7 +1177,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Sulfate Free (772)</Text>
+            <Text fontWeight={"thin"}>Sulfate Free (772)</Text>
           </HStack>
           <HStack>
             <button
@@ -1149,7 +1188,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Vegan (31)</Text>
+            <Text fontWeight={"thin"}>Vegan (31)</Text>
           </HStack>
           <HStack>
             <button
@@ -1160,7 +1199,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Gluten Free (9)</Text>
+            <Text fontWeight={"thin"}>Gluten Free (9)</Text>
           </HStack>
           <HStack>
             <button
@@ -1171,7 +1210,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Fragrance free (25)</Text>
+            <Text fontWeight={"thin"}>Fragrance free (25)</Text>
           </HStack>
           <HStack>
             <button
@@ -1182,7 +1221,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Cruelty Free (1)</Text>
+            <Text fontWeight={"thin"}>Cruelty Free (1)</Text>
           </HStack>
           <HStack>
             <button
@@ -1193,7 +1232,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Contains SPF (89)</Text>
+            <Text fontWeight={"thin"}>Contains SPF (89)</Text>
           </HStack>
           <HStack>
             <button
@@ -1204,7 +1243,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >BHT Free (95)</Text>
+            <Text fontWeight={"thin"}>BHT Free (95)</Text>
           </HStack>
           <HStack>
             <button
@@ -1215,7 +1254,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Certified Orgainics (84)</Text>
+            <Text fontWeight={"thin"}>Certified Orgainics (84)</Text>
           </HStack>
           <HStack>
             <button
@@ -1226,7 +1265,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Alcohol Free (16)</Text>
+            <Text fontWeight={"thin"}>Alcohol Free (16)</Text>
           </HStack>
           <HStack>
             <button
@@ -1237,7 +1276,7 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Clean (41)</Text>
+            <Text fontWeight={"thin"}>Clean (41)</Text>
           </HStack>
           <HStack>
             <button
@@ -1248,7 +1287,234 @@ export default function ProductPage() {
                 marginLeft: "8px",
               }}
             ></button>
-            <Text fontWeight={"thin"} >Mineral Based (6)</Text>
+            <Text fontWeight={"thin"}>Mineral Based (6)</Text>
+          </HStack>
+        </Stack>
+        <Text mt={"20px"} mb={"15px"}>
+          {" "}
+          <b> Gender </b>{" "}
+        </Text>
+        <Stack spacing={3} borderTop={"1px solid gray"} h={"185px"}>
+          <HStack mt={"15px"}>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>Boys (14)</Text>
+          </HStack>
+          <HStack>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>Girls (14)</Text>
+          </HStack>
+          <HStack>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>Men (1979)</Text>
+          </HStack>
+          <HStack>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>Women (3019)</Text>
+          </HStack>
+          <HStack>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>Unisex (219)</Text>
+          </HStack>
+        </Stack>
+        <Text mt={"20px"} mb={"15px"}>
+          {" "}
+          <b> Price </b>{" "}
+        </Text>
+        <Stack
+          spacing={3}
+          borderTop={"1px solid gray"}
+          h={"185px"}
+          overflowY={"scroll"}
+        >
+          <HStack mt={"15px"}>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>Less than $10 (310)</Text>
+          </HStack>
+          <HStack>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>$10-$25 (116)</Text>
+          </HStack>
+          <HStack>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>$25-$50 (4)</Text>
+          </HStack>
+          <HStack>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>$50-$100 (152)</Text>
+          </HStack>
+          <HStack>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>$100-$150 (7)</Text>
+          </HStack>
+          <HStack>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>More than $150 (271)</Text>
+          </HStack>
+        </Stack>
+        <Text mt={"20px"} mb={"15px"}>
+          {" "}
+          <b>Savings </b>{" "}
+        </Text>
+        <Stack spacing={3} borderTop={"1px solid gray"} h={"145px"}>
+          <HStack mt={"15px"}>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>Up to 25% (14)</Text>
+          </HStack>
+          <HStack>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>25%-50% (14)</Text>
+          </HStack>
+          <HStack>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>50%-75% (1979)</Text>
+          </HStack>
+          <HStack>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>More than &5% (3019)</Text>
+          </HStack>
+        </Stack>
+        <Text mt={"20px"} mb={"15px"}>
+          {" "}
+          <b> Average Reviews </b>{" "}
+        </Text>
+        <Stack spacing={3} borderTop={"1px solid gray"} h={"110px"}>
+          <HStack mt={"15px"}>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>2-3 (90)</Text>
+          </HStack>
+          <HStack>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>3-4 (32)</Text>
+          </HStack>
+          <HStack>
+            <button
+              style={{
+                border: "1px solid gray",
+                width: "20px",
+                height: "20px",
+                marginLeft: "8px",
+              }}
+            ></button>
+            <Text fontWeight={"thin"}>4+ (81)</Text>
           </HStack>
         </Stack>
       </Box>
@@ -1256,11 +1522,11 @@ export default function ProductPage() {
       <Box
         display={"flex"}
         flexDirection={"column"}
-        width={"68%"}
-        border={"1px solid green"}
+        width={"72.5%"}
+        border={"0px solid green"}
       >
         <Stack
-          border={"1px solid red"}
+          border={"0px solid red"}
           alignItems={"start"}
           spacing={5}
           mt={"70px"}
@@ -1282,6 +1548,26 @@ export default function ProductPage() {
             to acne.{" "}
           </Text>
         </Stack>
+        <HStack width={"100%"} m={"auto"} justifyContent={"space-between"} mt={"50px"} mb={"20px"} >
+          <HStack width={"50%"} spacing={3} border={"0px solid pink"}justifyContent={"left"} >
+            <Text fontWeight={"thin"}>Sort by</Text>
+            <Select placeholder="Default" width={"50%"} borderRadius={"none"} >
+              <option value="Popularity">Popularity</option>
+              <option value="Low to High">Price: Low to High</option>
+              <option value="High to Low">Price: High to Low</option>
+              <option value="option3">A-Z</option>
+              <option value="Percentage Discount">Percentage Discount</option>
+              <option value="Newest arrivals">Newest arrivals</option>
+            </Select>
+          </HStack>
+          <HStack width={"50%"} border={"0px solid pink"} justifyContent={"right"} spacing={1} >
+            <Button>First</Button>
+            <Button>Previous</Button>
+            <Button>0</Button>
+            <Button>Next</Button>
+            <Button>Last</Button>
+          </HStack>
+        </HStack>
         <Grid gridTemplateColumns={"repeat(3,1fr)"} gridGap={3.5}>
           {data &&
             data?.map((el, i) => {
