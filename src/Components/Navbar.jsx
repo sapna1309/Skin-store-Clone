@@ -25,7 +25,9 @@ import {
   PopoverContent,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { useNavigate,Link as HomeLink } from "react-router-dom";
+import { Link as HomeLink } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthContext";
 
 const Links = ["Dashboard", "Projects", "Team"];
 
@@ -43,16 +45,33 @@ const NavLink = () => (
 );
 
 export default function Navbar() {
+  const { prodArray } = useContext(AuthContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { isOpenMenu, onToggle } = useDisclosure();
 
- const navigate = useNavigate();
+  const { isAuth, toggleUser } = useContext(AuthContext);
+
+  let totalCount = 0;
+
+  prodArray.map((ele) => (totalCount += ele.quantity));
+
+  console.log("count", totalCount);
+
+  console.log("isAuth", isAuth);
 
   return (
     <>
       {/* // Navbar Starts// */}
 
-      <Box bg={"white"} px={4} borderBottom={"2px solid black"} pos={"fixed"} top={0} zIndex={99999}width={"100%"} >
+      <Box
+        bg={"white"}
+        px={4}
+        borderBottom={"2px solid black"}
+        pos={"fixed"}
+        top={0}
+        zIndex={9999}
+        width={"100%"}
+      >
         <Flex
           height={"110px"}
           alignItems={"center"}
@@ -66,17 +85,15 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            
             <HomeLink to="/">
-             <Box>
-              <Image
-                src={`https://i.ibb.co/tb29NvM/project-logo-1.png`}
-                ml="50px"
-                width="55%"
-              />
-               </Box>
-              </HomeLink>
-           
+              <Box>
+                <Image
+                  src={`https://i.ibb.co/tb29NvM/project-logo-1.png`}
+                  ml="50px"
+                  width="55%"
+                />
+              </Box>
+            </HomeLink>
           </HStack>
 
           <InputGroup w="35%" mr="200px" border={"1px solid #D2D5D2"}>
@@ -110,7 +127,6 @@ export default function Navbar() {
                   cursor={"pointer"}
                   minW={0}
                 >
-                  
                   <Avatar
                     size={"sm"}
                     src={
@@ -120,7 +136,12 @@ export default function Navbar() {
                 </MenuButton>
                 <Text>Account</Text>
                 <MenuList>
-                  <MenuItem onClick={()=>navigate('/login')}>Login</MenuItem>
+                  <HomeLink to="/login">
+                    {" "}
+                    <MenuItem onClick={toggleUser}>
+                      {isAuth ? "Logout" : "Login"}
+                    </MenuItem>
+                  </HomeLink>
                   <MenuItem>Register</MenuItem>
                   <MenuDivider />
                   <MenuItem>Wishlist</MenuItem>
@@ -129,7 +150,7 @@ export default function Navbar() {
               </HStack>
             </Menu>
             <Menu>
-              <HStack>
+              <HStack spacing={1}>
                 <MenuButton
                   as={Button}
                   rounded={"full"}
@@ -144,7 +165,17 @@ export default function Navbar() {
                     }
                   />
                 </MenuButton>
+                <Text
+                  backgroundColor={"black"}
+                  color={"white"}
+                  borderRadius={"50%"}
+                  paddingX={"3px"}
+                  fontSize={"11px"}
+                >
+                  {totalCount}
+                </Text>
                 <Text>Cart</Text>
+
                 <MenuList>
                   <MenuItem>View Cart</MenuItem>
                   <MenuItem>Register</MenuItem>
@@ -171,7 +202,7 @@ export default function Navbar() {
 
       {/* DropDown Menu Starts */}
 
-      <Box pos={"fixed"} top={112} width={"100%"} zIndex={999} >
+      <Box pos={"fixed"} top={112} width={"100%"} zIndex={999}>
         <Flex
           bg={useColorModeValue("white", "gray.800")}
           color={useColorModeValue("gray.600", "white")}
@@ -212,7 +243,7 @@ export default function Navbar() {
       </Box>
 
       {/* DropDown Menu Ends */}
-      <Stack backgroundColor={"#F2F2F2"} mb="20px" mt="152px" width="100%" >
+      <Stack backgroundColor={"#F2F2F2"} mb="20px" mt="152px" width="100%">
         <HStack
           border={"0px solid gray"}
           backgroundColor={"#F2F2F2"}
@@ -290,7 +321,7 @@ const DesktopNav = () => {
     >
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
-          <Popover trigger={"hover"} placement={"bottom-start"} >
+          <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Link
                 p={2}
@@ -316,9 +347,8 @@ const DesktopNav = () => {
                 p={4}
                 rounded={"sm"}
                 width={"auto"}
-            
               >
-                <HStack alignItems={"start"}  >
+                <HStack alignItems={"start"}>
                   {navItem.children.map((child) => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
@@ -334,14 +364,15 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, subLabel }) => {
   return (
-    <HomeLink to="/products"
+    <HomeLink
+      to="/products"
       role={"group"}
       display={"block"}
       p={2}
       rounded={"md"}
       _hover={{ bg: useColorModeValue("#EEEEE9") }}
     >
-      <Stack textAlign={"left"} spacing={2} borderTop={"1px solid gray"} >
+      <Stack textAlign={"left"} spacing={2} borderTop={"1px solid gray"}>
         <Box mt="15px">
           <Text
             transition={"all .3s ease"}
