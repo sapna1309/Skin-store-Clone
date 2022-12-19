@@ -18,7 +18,7 @@ import { RejectAlert, SuccessAlert } from "./AlertPage";
 function Login() {
   const user = { email: "", password: "" };
 
-  const { toggleUser,isAuth } = useContext(AuthContext);
+  const { loginUser,isAuth } = useContext(AuthContext);
   const [formdata, setFormdata] = useState(user);
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
@@ -33,11 +33,8 @@ function Login() {
     })
       .then((res) => res.json())
       .then((res) => {
-        if (res.token) {
-          toggleUser(res.token);
-          navigate("/");
-        }
-        console.log("res", res);
+         console.log("res", res);
+         loginUser(res.token)
       })
       .catch((err) => console.log(err));
   };
@@ -45,14 +42,13 @@ function Login() {
     setFormdata({ ...formdata, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    postData(formdata);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   postData(formdata);
+  // };
 
   return (
     <>
-    {isAuth?<SuccessAlert/>:<RejectAlert/>}
     <HStack
       border={"0px solid black"}
       width={"60%"}
@@ -105,7 +101,11 @@ function Login() {
           <Text
             fontWeight={"thin"}
             _hover={{ cursor: "pointer", textDecoration: "underline" }}
-            onClick={handleSubmit}
+            onClick={()=>{
+            postData(formdata);
+            navigate("/");
+            console.log("sapna");
+            }}
           >
             SIGN IN
           </Text>

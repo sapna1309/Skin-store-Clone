@@ -7,13 +7,20 @@ function AuthContextProvider({ children }) {
 const [prodArray,setProdArray]=useState([]);
 
   const [isAuth, setIsAuth] = useState(false);
+  const [token,setToken] = useState(null);
 
-const toggleUser=()=>{
-   setIsAuth(!isAuth)
+const loginUser=(token)=>{
+   setIsAuth(true);
+   setToken(token);
 }  
 
+const logoutUser=()=>{
+  setIsAuth(false);
+  setToken(null);
+}
   const value = {
-    toggleUser,
+    loginUser,
+    logoutUser,
     prodArray,
     setProdArray,
   };

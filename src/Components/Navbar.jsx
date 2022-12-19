@@ -23,9 +23,12 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { Link as HomeLink } from "react-router-dom";
+import { Link as HomeLink, Navigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";
 
@@ -138,7 +141,7 @@ export default function Navbar() {
                 <MenuList>
                   <HomeLink to="/login">
                     {" "}
-                    <MenuItem onClick={toggleUser}>
+                    <MenuItem>
                       {isAuth ? "Logout" : "Login"}
                     </MenuItem>
                   </HomeLink>
@@ -177,10 +180,11 @@ export default function Navbar() {
                 <Text>Cart</Text>
 
                 <MenuList>
-                  <MenuItem>View Cart</MenuItem>
+                  
+                <Breadcrumb><MenuItem ><BreadcrumbLink href="/cart" > View Cart</BreadcrumbLink></MenuItem></Breadcrumb> 
                   <MenuItem>Register</MenuItem>
                   <MenuDivider />
-                  <MenuItem>Link 3</MenuItem>
+                  <MenuItem>link 3</MenuItem>
                 </MenuList>
               </HStack>
             </Menu>

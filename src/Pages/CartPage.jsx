@@ -15,7 +15,7 @@ import {
   Tbody,
 } from "@chakra-ui/react";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 import CartCardPage from "./CartCardsPage";
 import TotalPrice from "./TotalPrice";
@@ -30,7 +30,9 @@ const styleHeadings = {
 
 export default function CartPage() {
 
-const {prodArray,setProdArray}= useContext(AuthContext);   
+const navigate =useNavigate();  
+
+const {prodArray,setProdArray,isAuth}= useContext(AuthContext);   
 
 let sum=0;
 
@@ -166,6 +168,10 @@ return (
             color: "black",
             cursor: "pointer",
           }}
+
+          onClick={()=>{
+           navigate("/checkout")
+          }}
         >
           <Image
             src="https://img.icons8.com/material-rounded/24/null/lock--v1.png"
@@ -173,8 +179,8 @@ return (
             mr="15px"
             _hover={{ filter: "invert(100%)" }}
           />
-          <Link to="/checkout">
-          <Text fontWeight={"thin"}>CHECKOUT SECURELY NOW</Text></Link>
+       
+          <Text fontWeight={"thin"}>CHECKOUT SECURELY NOW</Text>
         </Button>
       </HStack>
     </Box>

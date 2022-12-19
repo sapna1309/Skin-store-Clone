@@ -12,6 +12,7 @@ import {
 import { useEffect, useState } from "react";
 import { Link as GoToHome } from "react-router-dom";
 import { getData } from "../Utility/Api";
+import Loader from "./Loader";
 import ProductsCard from "./ProductsCard";
 
 const styleHeadings = {
@@ -24,14 +25,18 @@ const styleHeadings = {
 export default function ProductPage() {
   const [data, setData] = useState([]);
 
+  const [loading,setLoading] = useState(false);
+
   useEffect(() => {
+    setLoading(true);
     getData().then((res) => {
       setData(res.data);
       console.log(res.data);
+      setLoading(false);
     });
   }, []);
 
-  return (
+  return loading? (<Loader/>): (
     <HStack
       width={"85%"}
       m={"auto"}
