@@ -23,6 +23,7 @@ const logoutUser=()=>{
     logoutUser,
     prodArray,
     setProdArray,
+    isAuth
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

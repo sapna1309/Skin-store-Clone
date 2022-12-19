@@ -17,7 +17,7 @@ export default function CartCardPage({ imageUrl, name, id, price,quantity,handle
       backgroundColor={"#EBEBEB"}
       padding={-10}
       _hover={{backgroundColor:"grey"}} 
-      disabled={quantity===0}
+      disabled={quantity===1}
       onClick={()=>handleQuantity(id,-1)} 
         >
           <MinusIcon width={"10px"}/>
@@ -29,7 +29,7 @@ export default function CartCardPage({ imageUrl, name, id, price,quantity,handle
         </Button>
       </HStack></Td>
      <Td> <Text>$ {price*quantity}.00</Text> </Td>
-     <Td> <CloseButton backgroundColor={"#EBEBEB"} _hover={{backgroundColor:"grey"}} handleDelet={()=>handleDelete(id)} /> </Td>
+     <Td> <CloseButton backgroundColor={"#EBEBEB"} _hover={{backgroundColor:"grey"}} onClick={()=>handleDelete(id)} /> </Td>
     {/* </HStack> */}
     </Tr>
   );

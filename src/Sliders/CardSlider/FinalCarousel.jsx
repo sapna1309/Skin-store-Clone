@@ -24,7 +24,7 @@ function CardSlider1() {
     key={item.id} {...item} />
   ));
   return (
-    <Box style={{ border: "0px solid red",width:"100%",zIndex:"0" }}>
+    <Box width={"100%"} >
       <Carousel showDots={true} responsive={responsive1}>
         {product}
       </Carousel>

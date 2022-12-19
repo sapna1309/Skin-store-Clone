@@ -14,7 +14,6 @@ import { Link as GoToHome } from "react-router-dom";
 import { getData } from "../Utility/Api";
 import Loader from "./Loader";
 import ProductsCard from "./ProductsCard";
-
 const styleHeadings = {
   fontFamily: "Lato-Regular,Helvetica,Arial,sans-serif",
   fontSize: "45px",
@@ -25,25 +24,71 @@ const styleHeadings = {
 export default function ProductPage() {
   const [data, setData] = useState([]);
 
-  const [loading,setLoading] = useState(false);
+  const [page, setPage] = useState(1);
+
+  const [totalPage,setTotalPage]=useState(0);
+
+  const [loading, setLoading] = useState(false);
+
+  const [order,setOrder] = useState("");
+
+  const handleChangeByPage = (val) => {
+    const newPage=page+val;
+    setPage(newPage);
+    getData(newPage);
+  };
+
+  const handleFirstPage=()=>{
+    getData(setPage(1));
+  }
+
+  const handleLastPage=()=>{
+  getData(setPage(Math.ceil(totalPage/15)))  
+  }
+
+  const handleSort=(e)=>{
+  setOrder(e.target.value);
+  }
+
+const handleTypeMoisturizes=async()=>{
+let res = await fetch (`https://tvacha-mock-server.onrender.com/products?_page=${page}&_limit=15&_type=moisturizer`);
+res=await res.json();
+setData(res)
+console.log("res", res)
+}
+
+  console.log("order",order);
 
   useEffect(() => {
     setLoading(true);
-    getData().then((res) => {
+    getData(page).then((res) => {
       setData(res.data);
+      setTotalPage(+(res.headers["x-total-count"]));
       console.log(res.data);
       setLoading(false);
-    });
-  }, []);
+    }).catch((err)=>{
+      console.log(err);
+      setLoading(false);
+    })
+  }, [page]);
 
-  return loading? (<Loader/>): (
+  console.log("tot",totalPage);
+
+  if(loading){
+    return <Loader/>
+    }else
+    return (
+    <>
+   
     <HStack
       width={"85%"}
       m={"auto"}
       border={"0px solid red"}
       justifyContent={"space-between"}
       alignItems={"start"}
+      borderBottom={"1px solid black"}
     >
+     
       <Box
         display={"flex"}
         flexDirection={"column"}
@@ -255,7 +300,8 @@ export default function ProductPage() {
                 width: "20px",
                 height: "20px",
                 marginLeft: "8px",
-              }}
+               }}
+              onClick={handleTypeMoisturizes}
             ></button>
             <Text fontWeight={"thin"}>Moisturizer (1107)</Text>
           </HStack>
@@ -1553,24 +1599,79 @@ export default function ProductPage() {
             to acne.{" "}
           </Text>
         </Stack>
-        <HStack width={"100%"} m={"auto"} justifyContent={"space-between"} mt={"50px"} mb={"20px"} >
-          <HStack width={"50%"} spacing={3} border={"0px solid pink"}justifyContent={"left"} >
+        <HStack
+          width={"100%"}
+          m={"auto"}
+          justifyContent={"space-between"}
+          mt={"50px"}
+          mb={"20px"}
+        >
+          <HStack
+            width={"50%"}
+            spacing={3}
+            border={"0px solid pink"}
+            justifyContent={"left"}
+          >
             <Text fontWeight={"thin"}>Sort by</Text>
-            <Select placeholder="Default" width={"50%"} borderRadius={"none"} >
+            <Select placeholder="Default" width={"50%"} borderRadius={"none"} onChange={handleSort}>
               <option value="Popularity">Popularity</option>
-              <option value="Low to High">Price: Low to High</option>
-              <option value="High to Low">Price: High to Low</option>
-              <option value="option3">A-Z</option>
+              <option value="asc">Price: Low to High</option>
+              <option value="desc">Price: High to Low</option>
+              <option value="A-Z">A-Z</option>
               <option value="Percentage Discount">Percentage Discount</option>
               <option value="Newest arrivals">Newest arrivals</option>
             </Select>
           </HStack>
-          <HStack width={"50%"} border={"0px solid pink"} justifyContent={"right"} spacing={1} >
-            <Button>First</Button>
-            <Button>Previous</Button>
-            <Button>0</Button>
-            <Button>Next</Button>
-            <Button>Last</Button>
+          <HStack
+            width={"50%"}
+            border={"0px solid pink"}
+            justifyContent={"right"}
+            spacing={1}
+          >
+            <Button
+              borderRadius={"none"}
+              backgroundColor={"#28bdb7"}
+              border={"1px solid gray"}
+              disabled={page===1}
+              onClick={handleFirstPage}
+            >
+              First
+            </Button>
+            <Button
+              onClick={() => handleChangeByPage(-1)}
+              borderRadius={"none"}
+              backgroundColor={"#28bdb7"}
+              border={"1px solid gray"}
+              disabled={page===1}
+            >
+              Previous
+            </Button>
+            <Button
+              borderRadius={"none"}
+              backgroundColor={"black"}
+              color={"white"}
+              border={"1px solid gray"}
+            >
+              {page}
+            </Button>
+            <Button
+              onClick={() => handleChangeByPage(1)}
+              borderRadius={"none"}
+              backgroundColor={"#28bdb7"}
+              border={"1px solid gray"}
+              disabled={page===Math.ceil(totalPage/15)}
+            >
+              Next
+            </Button>
+            <Button
+              borderRadius={"none"}
+              backgroundColor={"#28bdb7"}
+              border={"1px solid gray"}
+              disabled={page===Math.ceil(totalPage/15)}
+              onClick={handleLastPage}
+            >
+              Last
+            </Button>
           </HStack>
         </HStack>
         <Grid gridTemplateColumns={"repeat(3,1fr)"} gridGap={3.5}>
@@ -1581,5 +1682,7 @@ export default function ProductPage() {
         </Grid>
       </Box>
     </HStack>
+ 
+    </>
   );
 }

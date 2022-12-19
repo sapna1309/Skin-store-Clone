@@ -51,7 +51,7 @@ export default function SingleProduct() {
 
   let sum1=0;
 
-prodArray.map((el) => (sum1 += el.price * el.quantity));
+prodArray.map((el) => (sum1 += Math.floor(el.price * el.quantity)));
 
 let totalCount1 =0;
 
@@ -73,10 +73,11 @@ console.log("count1",totalCount1);
   return (
     <Box width={"90%"} m={"auto"} border={"0px solid red"}>
       {/* Modal */}
-      <Stack>
+      <Stack >
+       
         <Modal isOpen={isOpen} size={"3xl"} onClose={onClose} isCentered>
           <ModalOverlay />
-          <ModalContent>
+          <ModalContent >
             <HStack
               borderBottom={"1px solid gray"}
               paddingX={"20px"}
@@ -93,7 +94,7 @@ console.log("count1",totalCount1);
               </Heading>
               <ModalCloseButton />
             </HStack>
-            <ModalBody>
+            <ModalBody  >
               <HStack
                 border={"0px solid black"}
                 width={"full"}

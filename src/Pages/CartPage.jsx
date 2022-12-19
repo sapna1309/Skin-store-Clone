@@ -18,6 +18,7 @@ import { useContext } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 import CartCardPage from "./CartCardsPage";
+import DefaultContent from "./Defaultcartcontent";
 import TotalPrice from "./TotalPrice";
 
 
@@ -36,7 +37,7 @@ const {prodArray,setProdArray,isAuth}= useContext(AuthContext);
 
 let sum=0;
 
-prodArray.map((el) => (sum += el.price * el.quantity));
+prodArray.map((el) => (sum += Math.floor(el.price * el.quantity)));
 
 
 const handleQuantity=(id,value)=>{
@@ -46,7 +47,17 @@ item.id === id ? { ...item, quantity: item.quantity + value } : item
   setProdArray(updatedData);
 };
 
-return (
+const handleDelete=(id)=>{
+const filteredData = prodArray.filter((el)=>el.id!==id);
+setProdArray(filteredData);
+console.log("sapna");
+}
+
+console.log("after deleted",prodArray);
+
+console.log("Auth",isAuth);
+
+return prodArray.length===0? (<DefaultContent/>): (
     <Box
       width={"90%"}
       margin={"auto"}
@@ -75,7 +86,7 @@ return (
           <Text fontWeight={"thin"}>CHECKOUT SECURELY NOW</Text>
         </Button>
       </HStack>
-      <Stack spacing={3} marginTop={"30px"}>
+      {/* <Stack spacing={3} marginTop={"30px"}>
         <Alert status="success" height={"40px"}>
           <AlertIcon />
           <Text color={"green"}>
@@ -108,7 +119,7 @@ return (
             - Don't forget to make your selection below
           </Text>
         </Alert>
-      </Stack>
+      </Stack> */}
       <Table border="0px" marginTop={"20px"}>
         <Thead>
           <Tr>
@@ -123,7 +134,7 @@ return (
           {/* map through the data */}
           {prodArray &&
             prodArray?.map((item) => {
-              return <CartCardPage key={item.id} {...item} handleQuantity={handleQuantity} />;
+              return <CartCardPage key={item.id} {...item} handleQuantity={handleQuantity} handleDelete={handleDelete} />;
             })}
         </Tbody>
       </Table>
@@ -158,6 +169,7 @@ return (
             <Text fontWeight={"thin"}>CONTINUE SHOPPING</Text>
           </Link>
         </Button>
+       
         <Button
           backgroundColor={"black"}
           color="white"
@@ -168,18 +180,20 @@ return (
             color: "black",
             cursor: "pointer",
           }}
-
           onClick={()=>{
-           navigate("/checkout")
+            {isAuth?navigate("/checkout"):navigate("/login")}
+            console.log("sapna");
           }}
+        
         >
           <Image
             src="https://img.icons8.com/material-rounded/24/null/lock--v1.png"
             filter={"invert(100%)"}
             mr="15px"
             _hover={{ filter: "invert(100%)" }}
+           
           />
-       
+         
           <Text fontWeight={"thin"}>CHECKOUT SECURELY NOW</Text>
         </Button>
       </HStack>

@@ -25,10 +25,10 @@ import {
   PopoverContent,
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink
+  BreadcrumbLink,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { Link as HomeLink, Navigate } from "react-router-dom";
+import { Link as HomeLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";
 
@@ -52,7 +52,9 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { isOpenMenu, onToggle } = useDisclosure();
 
-  const { isAuth, toggleUser } = useContext(AuthContext);
+  const { isAuth, logoutUser } = useContext(AuthContext);
+
+  const navigate=useNavigate();
 
   let totalCount = 0;
 
@@ -142,13 +144,30 @@ export default function Navbar() {
                   <HomeLink to="/login">
                     {" "}
                     <MenuItem>
-                      {isAuth ? "Logout" : "Login"}
+                      <Button width={"full"} disabled={isAuth}>
+                        Login
+                      </Button>
                     </MenuItem>
                   </HomeLink>
-                  <MenuItem>Register</MenuItem>
+                  <MenuItem>
+                    <Button width={"full"}>Register</Button>
+                  </MenuItem>
                   <MenuDivider />
-                  <MenuItem>Wishlist</MenuItem>
-                  <MenuItem>Your Orders</MenuItem>
+                  <MenuItem>
+                    <Button width={"full"}>Admin</Button>
+                  </MenuItem>
+                  <MenuItem>
+                    <Button
+                      width={"full"}
+                      disabled={!isAuth}
+                      onClick={() => {
+                        logoutUser()
+                        navigate("/");
+                      }}
+                    >
+                      Logout
+                    </Button>
+                  </MenuItem>
                 </MenuList>
               </HStack>
             </Menu>
@@ -180,11 +199,20 @@ export default function Navbar() {
                 <Text>Cart</Text>
 
                 <MenuList>
-                  
-                <Breadcrumb><MenuItem ><BreadcrumbLink href="/cart" > View Cart</BreadcrumbLink></MenuItem></Breadcrumb> 
-                  <MenuItem>Register</MenuItem>
+                  <MenuItem>
+                    <Breadcrumb width={"full"}>
+                      <Button width={"full"}>
+                        <BreadcrumbLink href="/cart">View Cart</BreadcrumbLink>
+                      </Button>
+                    </Breadcrumb>
+                  </MenuItem>
+                  <MenuItem>
+                    <Button width={"full"}>My Orders</Button>
+                  </MenuItem>
                   <MenuDivider />
-                  <MenuItem>link 3</MenuItem>
+                  <MenuItem>
+                    <Button width={"full"}>Wishlist</Button>
+                  </MenuItem>
                 </MenuList>
               </HStack>
             </Menu>
@@ -379,7 +407,7 @@ const DesktopSubNav = ({ label, subLabel }) => {
       <Stack textAlign={"left"} spacing={2} borderTop={"1px solid gray"}>
         <Box mt="15px">
           <Text
-            transition={"all .3s ease"}
+            transition={"all .1s ease"}
             _groupHover={{ color: "#C83E4D" }}
             fontWeight={500}
           >
