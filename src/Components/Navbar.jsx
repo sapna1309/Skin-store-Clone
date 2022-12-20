@@ -28,7 +28,7 @@ import {
   BreadcrumbLink,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { Link as HomeLink, useNavigate } from "react-router-dom";
+import { Link as HomeLink, Navigate, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";
 
@@ -200,11 +200,9 @@ export default function Navbar() {
 
                 <MenuList>
                   <MenuItem>
-                    <Breadcrumb width={"full"}>
                       <Button width={"full"}>
-                        <BreadcrumbLink href="/cart">View Cart</BreadcrumbLink>
+                        <Link to="/cart">View Cart</Link>
                       </Button>
-                    </Breadcrumb>
                   </MenuItem>
                   <MenuItem>
                     <Button width={"full"}>My Orders</Button>
