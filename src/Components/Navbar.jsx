@@ -200,8 +200,8 @@ export default function Navbar() {
 
                 <MenuList>
                   <MenuItem>
-                      <Button width={"full"}>
-                        <Link to="/cart">View Cart</Link>
+                      <Button width={"full"} onClick={()=>navigate("/cart")}>
+                       View Cart
                       </Button>
                   </MenuItem>
                   <MenuItem>

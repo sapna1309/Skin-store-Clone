@@ -14,7 +14,6 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import axios from "axios";
-import Loader from "./Loader";
 
 
 
