@@ -24,7 +24,7 @@
    <li>Checkout Functionalities</li>
 </ul>
 
-# Home Page
+# Home Page-
 ![Screenshot 2023-01-04 03 47 16-c-h-1](https://user-images.githubusercontent.com/110045725/210452340-73fb9fdc-3f09-4845-aeab-c200c1ff4fd1.png)
 ![Screenshot 2023-01-04 03 47 34-c-h-2](https://user-images.githubusercontent.com/110045725/210452357-ffdc16f6-3638-4f3b-9697-708b65fffbdc.png)
 
@@ -46,7 +46,7 @@
 # Payment Page-
 ![Screenshot 2023-01-04 03 56 26-c-ch-p](https://user-images.githubusercontent.com/110045725/210452491-d3e9ff5f-4184-4da4-802b-81082c824c97.png)
 
-# Order Booked-
+# Order Placed-
 ![Screenshot 2023-01-04 03 56 41-c-lp-final](https://user-images.githubusercontent.com/110045725/210452509-b8e56ab6-402f-4e89-81ac-6e3428de718a.png)
 
 # Thankyou.
