@@ -766,35 +766,35 @@
       "id": 1,
       "title": "Blog 1",
       "description": "This is blog 1",
-      "author": "ritesh",
+      "author": "Sapna",
       "createdOn": 1669728310804
     },
     {
       "id": 2,
       "title": "Blog 2",
       "description": "This is blog 2",
-      "author": "ritesh",
+      "author": "Sapna",
       "createdOn": 1669728320804
     },
     {
       "id": 3,
       "title": "Blog 3",
       "description": "This is blog 3",
-      "author": "ritesh",
+      "author": "Sapna",
       "createdOn": 1669748310804
     },
     {
       "id": 4,
       "title": "Blog 4",
       "description": "This is blog 4",
-      "author": "ritesh",
+      "author": "Sapna",
       "createdOn": 1669748310804
     },
     {
       "id": 5,
       "title": "Blog 5",
       "description": "This is blog 5",
-      "author": "ritesh",
+      "author": "Sapna",
       "createdOn": 1669748310804
     }
   ],
@@ -803,35 +803,35 @@
       "id": 1,
       "title": "Feed 1",
       "description": "This is feed 1",
-      "author": "ritesh",
+      "author": "Sapna",
       "createdOn": 1669728310804
     },
     {
       "id": 2,
       "title": "Feed 2",
       "description": "This is feed 2",
-      "author": "ritesh",
+      "author": "Sapna",
       "createdOn": 1669728320804
     },
     {
       "id": 3,
       "title": "Feed 3",
       "description": "This is feed 3",
-      "author": "ritesh",
+      "author": "Sapna",
       "createdOn": 1669748310804
     },
     {
       "id": 4,
       "title": "Feed 4",
       "description": "This is feed 4",
-      "author": "ritesh",
+      "author": "Sapna",
       "createdOn": 1669748310804
     },
     {
       "id": 5,
       "title": "Feed 5",
       "description": "This is feed 5",
-      "author": "ritesh",
+      "author": "Sapna",
       "createdOn": 1669748310804
     }
   ]
